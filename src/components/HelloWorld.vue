@@ -27,9 +27,23 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
   </div>
+  <div>
+    <g>
+      <polygon :points="points"></polygon>
+      <axis-lable v-for="(stat, index) in stats"></axis-lable>
+    </g>
+  </div>
 </template>
 
 <script>
+Vue.component('polygraph', {
+  props: ['stats'],
+  template: '#polygraph-template',
+  computed: {
+    points: function()
+  }
+})
+
 export default {
   name: 'HelloWorld',
   props: {
@@ -51,22 +65,9 @@ export default {
       }
     }
   }
-
-  return {
-    [Symbol.asyncInterator]: function() {
-      let pageIndex = 0
-      let photoIndex = -1
-      let cache = null
-
-      const fillCache = page =>
-      tagSearch(tag, page).then(photos => {
-        cache = photos
-      })
-    }
-  }
 }
-</script>
 
+</script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
