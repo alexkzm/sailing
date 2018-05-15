@@ -41,6 +41,31 @@ Vue.component('polygraph', {
   template: '#polygraph-template',
   computed: {
     points: function()
+  },
+  components: {
+    'axis-lable': {
+      props: {
+        stat: Object,
+        index: Number,
+        total: Number
+      },
+    template: '#axis-label-template',
+      computed: {}
+    }
+  }
+})
+
+new Vue({
+  el: '#demo',
+  data: {
+    newLabel: '',
+    stats: stats
+  },
+  methods: {
+    add: function () {
+    },
+    remove: function () {
+    }
   }
 })
 
