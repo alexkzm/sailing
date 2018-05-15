@@ -35,6 +35,35 @@ export default {
   props: {
     msg: String
   }
+
+  const delay = seconds => new Promise(resolve => setTimeout(resolve, seconds*1000))
+
+  return {
+    [Symbol.asyncInterator]: async function*() {
+      let pageIndex = 1
+      while(true){
+      const pageData = await tagSearch(tag, pageIndex)
+      for(const url of pageData){
+        await delay(2)
+        yield url
+      }
+      pageIndex = pageIndex + 1
+      }
+    }
+  }
+
+  return {
+    [Symbol.asyncInterator]: function() {
+      let pageIndex = 0
+      let photoIndex = -1
+      let cache = null
+
+      const fillCache = page =>
+      tagSearch(tag, page).then(photos => {
+        cache = photos
+      })
+    }
+  }
 }
 </script>
 
