@@ -93,11 +93,12 @@ export default {
 }
 
 let pattern1 = "{[()]}"
-let patter2 = "/\{\[\(\/"
-let flags = "g"
-let cleanup = new RegExp(pattern1, flags)
+let patter2 = "/\{\[\(\)\]\}\/"
+let flags = "gim"
+let cleanup1 = new RegExp(pattern1, flags)
+let cleanup2 = new RegExp(pattern2, flags)
 
-pattern1.match()
+pattern1.match(pattern2)
 pattern2.replace()
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
