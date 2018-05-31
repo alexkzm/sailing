@@ -116,7 +116,11 @@ pattern1.match(pattern2)
 pattern2.replace()
 
 const ul = document.getElementsByClassName(links)
-const field = document.getElementsByClassName(form)
+const form = document.getElementsByClassName(form)
+
+form.addEventListener("submit", e => 
+  e.preventDefault)
+
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -141,6 +145,12 @@ a {
 
 .todo {
 
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .todo-list {
