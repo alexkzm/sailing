@@ -114,6 +114,9 @@ let cleanup2 = new RegExp(pattern2, flags)
 
 pattern1.match(pattern2)
 pattern2.replace()
+
+const ul = document.getElementsByClassName(links)
+const field = document.getElementsByClassName(form)
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -130,5 +133,20 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.links {
+
+}
+
+.todo {
+
+}
+
+.todo-list {
+  list-style: none;
+  justify-content: space-between;
+  justify-self: first baseline;
+  display: flex;
 }
 </style>
