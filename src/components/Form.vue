@@ -29,8 +29,9 @@ pattern2.replace()
 const ul = document.getElementsByClassName(links)
 const form = document.getElementsByClassName(form)
 
-form.addEventListener("submit", e => 
-  e.preventDefault)
+form &&
+  form.addEventListener("submit", e => 
+    e.preventDefault)
 
 export default {
     

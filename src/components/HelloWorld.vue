@@ -27,12 +27,6 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
   </div>
-  <div>
-    <g>
-      <polygon :points="points"></polygon>
-      <axis-lable v-for="(stat, index) in stats"></axis-lable>
-    </g>
-  </div>
 </template>
 
 <script>
