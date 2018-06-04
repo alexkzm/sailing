@@ -19,6 +19,20 @@
 
 <script>
 
+    function delayed(delayMilliseconds, iterable) {
+        return {
+            [Symbol.asyncIterator]: function() {
+                const iterator = iterable[Symbol.asyncIterator]()
+                const delayedIterable = {
+                    next: () => {
+                        return delay(delayMilliseconds).then(() => iterator.next())
+                    }
+                }
+                return delayedIterable
+            }
+        }
+    }
+
     document.body.classList.toggle("body--themed")
 
 export default {
