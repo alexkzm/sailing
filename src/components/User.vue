@@ -18,9 +18,15 @@
 </template>
 
 <script>
+
+    document.body.classList.toggle("body--themed")
+
 export default {
     
 }
+
+    //Error handling
+    if(!ul) throw new Error("Could not find [data-js-list]")
 </script>
 
 <style>
@@ -43,8 +49,16 @@ themed {
     color: gold !important;
 }
 
+:focus {
+    outline: 2px solid orange;
+}
+
 .body--themed [data-theme="button"] {
     color: gold;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 @media screen and (min-width: 700px) {
