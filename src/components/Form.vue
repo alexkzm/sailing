@@ -11,7 +11,11 @@
       </li>
       <% }); %> 
     </ul>
-
+    <transition>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </transition>
   </div>   
 </template>
 
@@ -33,6 +37,10 @@ form &&
   form.addEventListener("submit", e => 
     e.preventDefault)
 
+import {
+  thing
+} from '../path/thing'
+
 export default {
     
 }
@@ -46,6 +54,11 @@ ul {
   list-style-type: none;
   padding: 0;
 }
+
+.form ul> li {
+  list-style: none;
+}
+
 li {
   display: inline-block;
   margin: 0 10px;
