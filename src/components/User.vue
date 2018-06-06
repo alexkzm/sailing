@@ -14,6 +14,10 @@
 
     <button class="button" data-js="open-sidebar" data-theme="button">Open Sidebar</button>
 
+    <div class="content">
+            {{{ post.content.rendered }}}
+    </div>
+
 
 </template>
 

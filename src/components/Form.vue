@@ -16,6 +16,7 @@
         <router-view></router-view>
       </keep-alive>
     </transition>
+    <Post v-for="post in posts" :post="post"></Post>
   </div>   
 </template>
 
@@ -42,6 +43,17 @@ import {
 } from '../path/thing'
 
 export default {
+  ready(){
+    this.getPage()
+  },
+
+data() {
+  return {
+    page: {
+
+    }
+  }
+}
     
 }
 </script>
