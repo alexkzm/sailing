@@ -10,6 +10,8 @@
             <samp></samp>
         </p>
         <button></button>
+        <button></button>
+        <button></button>
         <transition-group><transition-group>
         <img>
         <input>
