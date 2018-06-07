@@ -15,7 +15,7 @@
     <button class="button" data-js="open-sidebar" data-theme="button">Open Sidebar</button>
 
     <div class="content">
-            {{{ post.content.rendered }}}
+            {{ post.content.rendered }}
     </div>
 
 
