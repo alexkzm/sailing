@@ -30,6 +30,20 @@ export default {
    background-color: teal;
    quotes: ">>" "<<"; 
 }
+
+.class { 
+empty-cells: show;
+background-repeat: no-repeat;
+grid-template: 'header';
+user-select: none;
+unicode-bidi: bidi-override;
+image-orientation: 0grad;
+ime-mode: inactive;
+overflow: hidden;
+orphans: unset;
+pad: image();
+}
+
 </style>
 
 
