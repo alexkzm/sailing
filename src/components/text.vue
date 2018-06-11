@@ -20,6 +20,18 @@
 </template>
 
 <script>
+
+async function* preloader(urls) {
+    for await(const url of urls) {
+        yield preloadedImage(url)
+    }
+} 
+
+map = mapper => async function
+
+async f*
+
+
 export default {
     
 }
