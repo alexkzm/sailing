@@ -35,6 +35,11 @@ async f*
 export default {
     
 }
+
+setTimeout(() => {
+    app.message == "hey"
+}, 2000);
+
 </script>
 
 <style>
